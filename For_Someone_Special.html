@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170d22">
+<title>For Someone Special ❤️</title>
+<style>
+:root{--pink:#ff78b7;--rose:#ff3f8e;--cream:#fff0f6;--night:#100d20;--lav:#d8b8ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:#fff;font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
+button,a{font:inherit}
+a{color:inherit;text-decoration:none}
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:14px 6%;background:#100d20c9;backdrop-filter:blur(12px);border-bottom:1px solid #ffffff18}
+.brand{color:var(--pink);font-size:1.1rem;font-style:italic}
+.navlinks{display:flex;gap:20px;font:12px Arial,sans-serif}
+.navlinks a:hover{color:var(--pink)}
+.hero{min-height:95vh;display:flex;align-items:center;padding:120px 9% 70px;position:relative;isolation:isolate;background:linear-gradient(90deg,#100d20ed 0%,#100d20a8 45%,#100d2030 100%),radial-gradient(ellipse at 75% 35%,#f67da3 0%,#8e477c 25%,#25234d 55%,#100d20 78%)}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,#100d20 0%,transparent 25%)}
+.hero-content{max-width:650px}
+.eyebrow{color:var(--lav);letter-spacing:3px;text-transform:uppercase;font:11px Arial,sans-serif}
+h1{font-size:clamp(3.2rem,8vw,6.8rem);line-height:.98;margin:18px 0;color:#ff9dcb;font-weight:normal;font-style:italic}
+.hero p{font:clamp(1rem,2vw,1.2rem)/1.8 Arial,sans-serif;max-width:510px;color:#f8eaf5}
+.script{font-style:italic;color:var(--pink)}
+.btn{display:inline-block;border:0;border-radius:99px;padding:14px 24px;background:var(--pink);color:#241023;cursor:pointer;font: bold 13px Arial,sans-serif;transition:.2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px #ff78b766}
+.btn.outline{background:transparent;border:1px solid var(--pink);color:#fff}
+section{padding:76px 8%}
+.section-title{font-size:clamp(2.2rem,5vw,3.8rem);color:var(--pink);font-weight:normal;font-style:italic;margin:0 0 16px}
+.sub{font:15px/1.8 Arial,sans-serif;color:#e9dfe9;max-width:650px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
+.light{background:linear-gradient(135deg,#fff0f6,#f9d9e8);color:#302137}
+.light .sub{color:#49364c}
+.light .section-title{color:#e82f82}
+.cardgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.card{padding:25px 22px;border:1px solid #ffffff22;border-radius:20px;background:#ffffff09;transition:.25s}
+.card:hover{transform:translateY(-5px);background:#ffffff12}
+.card .emoji{font-size:1.8rem}
+.card h3{color:var(--pink);font-size:1.35rem;font-weight:normal}
+.card p{font:14px/1.7 Arial,sans-serif;color:#eee}
+.light .card{background:#ffffffa6;border-color:#f1b8d2}
+.light .card p{color:#49364c}
+.pill{display:inline-block;margin:6px 6px 0 0;padding:8px 12px;border:1px solid #f28bbb8a;border-radius:99px;font:12px Arial,sans-serif}
+.moments{background:radial-gradient(ellipse at top,#422342,#100d20 65%)}
+.quote{font-size:clamp(1.5rem,4vw,2.7rem);line-height:1.4;color:#ffe4f0;font-style:italic;max-width:900px}
+.future{background:linear-gradient(135deg,#ffeaf3,#f4d7ef);color:#302137}
+.future .sub{color:#49364c}
+.dreamlist{list-style:none;padding:0;font:15px/2 Arial,sans-serif}
+.dreamlist li:before{content:"♡";color:#e82f82;font-size:1.4rem;margin-right:12px}
+.letter{background:linear-gradient(130deg,#26182d,#100d20 60%);position:relative}
+.letter-paper{background:#fff0df;color:#49303c;border-radius:4px;padding:clamp(25px,5vw,55px);box-shadow:0 18px 50px #0005;transform:rotate(-1deg);max-width:760px;margin:28px auto}
+.letter-paper p{font-size:1.15rem;line-height:1.9}
+.final{text-align:center;background:radial-gradient(ellipse at center,#4b1c42,#100d20 70%);padding-top:100px;padding-bottom:100px}
+.final h2{font-size:clamp(2.5rem,7vw,5rem);font-weight:normal;color:var(--pink);font-style:italic}
+.final .sub{margin:0 auto 25px}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:25px 0}
+#reply{min-height:28px;color:#ffc0df;font-style:italic}
+footer{text-align:center;padding:24px;color:#c9b6cb;font:12px Arial,sans-serif;border-top:1px solid #ffffff18}
+.heart{position:fixed;bottom:-30px;z-index:30;pointer-events:none;animation:floatUp 6s linear forwards;opacity:.8}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.reveal.show{opacity:1;transform:none}
+.musicbar{position:fixed;bottom:15px;right:15px;z-index:25;background:#201329;border:1px solid #ff78b766;border-radius:16px;padding:12px;box-shadow:0 8px 30px #0004;font:12px Arial,sans-serif;max-width:235px}
+.musicbar label{display:block;color:#ffc0df;margin-bottom:7px}
+.musicbar input{width:100%;font-size:11px}
+.musicbar button{margin-top:8px;padding:8px 12px}
+@media(max-width:720px){.nav{padding:12px 5%}.navlinks{gap:10px;font-size:10px}.navlinks a:nth-child(2),.navlinks a:nth-child(4){display:none}.hero{min-height:88vh;padding:115px 7% 70px;background:linear-gradient(90deg,#100d20e8,#100d2070),radial-gradient(ellipse at 70% 35%,#f67da3,#4a3269 45%,#100d20 80%)}section{padding:60px 7%}.two{grid-template-columns:1fr}.cardgrid{grid-template-columns:1fr}.musicbar{max-width:180px;right:8px;bottom:8px}.musicbar input{max-width:150px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="#home">♡ For Someone Special</a>
+  <div class="navlinks"><a href="#home">Home</a><a href="#about">About You</a><a href="#moments">Little Things</a><a href="#dreams">Our Dreams</a><a href="#letter">A Letter</a></div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-content reveal show">
+    <div class="eyebrow">A little page, a big feeling</div>
+    <h1>Hey,<br>Butterrrrrrrrrrrrrrr… ♡</h1>
+    <p>I could have sent you an ordinary message. But you are not an ordinary person to me, so I wanted to make you something a little different.</p>
+    <p class="script">This little corner of the internet is just for you. 💗</p>
+    <a class="btn" href="#about">Open your surprise ↗</a>
+  </div>
+</header>
+
+<section class="light" id="about">
+  <div class="two reveal">
+    <div>
+      <div class="eyebrow" style="color:#c42a72">A few things I hope you know</div>
+      <h2 class="section-title">It's more than beauty ♡</h2>
+      <p class="sub">Maybe people notice your smile first. But what makes someone truly special is everything that cannot be seen in a photograph.</p>
+      <div class="pill">Your smile😻💛</div><div class="pill">Your kind heart♡💐</div><div class="pill">Your behaviours 😻🤩👶🙈❣️💜</div><div class="pill">Your innocuousness🐰🌙</div>
+    </div>
+    <div class="card">
+      <div class="emoji">🌸</div>
+      <h3>What makes you, YOU</h3>
+      <p>Your smile can brighten an ordinary day. Your kindness can make me feel seen. And the little things you do without even thinking mean more to me than you realise.</p>
+      <p><strong>Never forget:</strong> you don't have to be perfect to be precious thangame🫂.</p>
+    </div>
+  </div>
+</section>
+
+<section id="special">
+  <div class="reveal">
+    <h2 class="section-title">Why you're special to me ✨</h2>
+    <p class="sub">It's not just one thing. Sometimes a person becomes special in a hundred tiny ways madam, until even the smallest thought reminds you of them.</p>
+  </div>
+  <div class="cardgrid">
+    <article class="card reveal"><div class="emoji">😊</div><h3>Your siripu 😻 </h3><p>Some smiles are beautiful to look at. Yours is the kind I would want to remember after a long, difficult day.</p></article>
+    <article class="card reveal"><div class="emoji">🫶</div><h3>Your heart</h3><p>The way you care🥺🫂, the way you listen❣️, and the little kindnesses you show can say more than a thousand words.</p></article>
+    <article class="card reveal"><div class="emoji">🌙</div><h3>Your presence</h3><p>You don't need to do anything extraordinary. Sometimes, simply being yourself is already something special pah.</p></article>
+  </div>
+</section>
+
+<section class="moments" id="moments">
+  <div class="reveal">
+    <h2 class="section-title">The little things ♡</h2>
+    <p class="sub">Not every beautiful story needs a grand beginning. Sometimes it starts with a simple hello, a random sticker🤪🫣, or a conversation you don't want to end.</p>
+    <div class="quote">“It's funny how one person can turn an ordinary moment into a memory you want to keep.”</div>
+    <p class="script">The smallest moments can mean the most. 💌</p>
+  </div>
+</section>
+
+<section class="future" id="dreams">
+  <div class="two reveal">
+    <div>
+      <h2 class="section-title">A beautiful kind of future ♡</h2>
+      <p class="sub">If life ever gives us the chance, I'd love for our story to be made of simple, genuine things.</p>
+    </div>
+    <ul class="dreamlist">
+      <li>Laughing about silly little things 😍</li>
+      <li>Supporting each other's dreams🫶🤝</li>
+      <li>Being honest, even when it's hard🫂</li>
+      <li>Making ordinary days feel special❣️</li>
+      <li>Choosing kindness and respect👩‍❤️‍👨</li>
+      <li>Growing together, one day at a time🥺🫂</li>
+    </ul>
+  </div>
+</section>
+
+<section class="letter" id="letter">
+  <div class="reveal">
+    <h2 class="section-title" style="text-align:center">A little letter for you madam💌</h2>
+    <div class="letter-paper">
+      <p>thangameyyyy,</p>
+      <p>I don't know if I can find the perfect words to explain what makes you so special. Maybe there aren't perfect words for feelings like these.</p>
+      <p>I just want you to know that you deserve happiness 🥰😍🐰, peace🤍, genuine care 🫂, and people who appreciate you for who you are. Never make yourself smaller to fit into someone else's world 🐣🫂❣️. Your dreams matter 💯. Your feelings matter 😊. <strong>You matter madam 🥺🫂.</strong></p>
+      <p>If I ever get the chance to be part of your story, I hope I can bring you more smiles than worries, more support than doubt, and more honest moments than empty promises.</p>
+      <p class="script" style="text-align:right;font-size:1.5rem">With a little courage, and lots of care ♡</p>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="question">
+  <div class="reveal">
+    <div class="eyebrow">One last little question</div>
+    <h2>Will you let me get closer? 💗</h2>
+    <p class="sub">No pressure, no perfect answer needed. I just wanted to be honest about how special you are to me.</p>
+    <div class="actions">
+      <button class="btn" id="yesBtn">Let's see where this goes 💖</button>
+      <button class="btn outline" id="thinkBtn">I need a little time 🌷</button>
+    </div>
+    <div id="reply" aria-live="polite"></div>
+    <p class="script">Whatever your answer, you deserve to be treated with kindness madam ❣️. ♡</p>
+  </div>
+</section>
+
+<footer>Made with ❤️ for someone very special · <span class="script">A little page, a genuine feeling.</span></footer>
+
+<div class="musicbar">
+  <label for="musicFile">🎵 Add your own song (MP3)</label>
+  <input id="musicFile" type="file" accept="audio/*">
+  <button class="btn" id="musicBtn" type="button">Play music ♫</button>
+  <audio id="music" loop></audio>
+</div>
+
+<script>
+const musicFile=document.getElementById('musicFile');
+const music=document.getElementById('music');
+const musicBtn=document.getElementById('musicBtn');
+let currentURL=null;
+musicFile.addEventListener('change',()=>{
+  const file=musicFile.files && musicFile.files[0];
+  if(!file)return;
+  if(currentURL)URL.revokeObjectURL(currentURL);
+  currentURL=URL.createObjectURL(file);
+  music.src=currentURL;
+  music.load();
+  musicBtn.textContent='Play music ♫';
+});
+musicBtn.addEventListener('click',async()=>{
+  if(!music.src){musicFile.click();return;}
+  if(music.paused){
+    try{await music.play();musicBtn.textContent='Pause music ♫';}
+    catch(e){musicBtn.textContent='Choose an MP3 first';}
+  }else{music.pause();musicBtn.textContent='Play music ♫';}
+});
+document.getElementById('yesBtn').addEventListener('click',()=>{
+  document.getElementById('reply').textContent='You just made this little page even more special. Let’s take it one sweet step at a time. 💖';
+  burstHearts(24);
+});
+document.getElementById('thinkBtn').addEventListener('click',()=>{
+  document.getElementById('reply').textContent='That’s completely okay. Take all the time you need — your feelings matter. 🌷';
+  burstHearts(8);
+});
+function burstHearts(count){
+  for(let i=0;i<count;i++){
+    const h=document.createElement('span');h.className='heart';h.textContent=['♡','♥','💗','✨'][Math.floor(Math.random()*4)];
+    h.style.left=Math.random()*100+'vw';h.style.fontSize=(14+Math.random()*22)+'px';h.style.animationDuration=(4+Math.random()*4)+'s';h.style.color=['#ff78b7','#ffd1e6','#d8b8ff'][Math.floor(Math.random()*3)];
+    document.body.appendChild(h);setTimeout(()=>h.remove(),8500);
+  }
+}
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal:not(.show)').forEach(el=>observer.observe(el));
+setInterval(()=>{if(Math.random()>.5){const h=document.createElement('span');h.className='heart';h.textContent='♡';h.style.left=Math.random()*100+'vw';h.style.color='#ff78b7';h.style.fontSize='18px';h.style.animationDuration='7s';document.body.appendChild(h);setTimeout(()=>h.remove(),7200)}},1800);
+</script>
+</body>
+</html>
